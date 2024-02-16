@@ -70,7 +70,7 @@ app.post("/webhook", (request, response) => {
 });
 
 app.get("/", (request, response) => {
-  response.status(200).send("Webhook is setup!!! Dhruv Gupta");
+  response.status(200).send("Webhook is setup!!! Dhruv Gupta Testing the API");
 });
 
 // https://graph.facebook.com/v18.0/224738690728648/messages `
