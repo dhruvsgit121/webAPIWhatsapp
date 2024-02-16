@@ -32,8 +32,9 @@ app.get("/webhook", (request, response) => {
 app.post("/webhook", (request, response) => {
   let body_param = request.body;
 
+process.stderr.write("request is post" + request);
 
-  console.log("request is post" + request);
+  // console.log("request is post" + request);
   console.log(JSON.stringify(body_param, null, 2));
 
   if (body_param.object) {
