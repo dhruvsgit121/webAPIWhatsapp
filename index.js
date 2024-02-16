@@ -12,6 +12,8 @@ app.listen(process.env.PORT, () => {
 });
 
 app.get("/webhook", (request, response) => {
+  console.log("request is get" + request);
+
   let mode = request.query["hub.mode"];
   let challenge = request.query["hub.challenge"];
   let token = request.query["hub.verify_token"];
@@ -30,6 +32,8 @@ app.get("/webhook", (request, response) => {
 app.post("/webhook", (request, response) => {
   let body_param = request.body;
 
+
+  console.log("request is post" + request);
   console.log(JSON.stringify(body_param, null, 2));
 
   if (body_param.object) {
