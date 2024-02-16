@@ -66,9 +66,9 @@ app.post("/webhook", (request, response) => {
           "Content-Type": "application/json",
         },
       });
-      response.status(200);
+      response.sendStatus(200);
     } else {
-      response.status(404);
+      response.sendStatus(404);
     }
   }
 });
