@@ -91,7 +91,7 @@ process.stderr.write("request is post" + request);
 
 app.post("/dhruvgupta", (request, response) => {
 
-  response.status(200).send("dhruv gupta 200");
+  response.status(200);
 
 //   console.log("called1");
 //   let body_param = request.body;
