@@ -76,9 +76,9 @@ process.stderr.write("request is post" + request);
           "Content-Type": "application/json",
         },
       });
-      response.sendStatus(200);
+      response.status(200);
     } else {
-      response.sendStatus(404);
+      response.status(404);
     }
   }
 });
