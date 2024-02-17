@@ -18,6 +18,7 @@ app.listen(port, () => {
 });
 
 app.get("/webhook", (request, response) => {
+  console.log("called2");
   console.log("request is get" + request);
 
   let mode = request.query["hub.mode"];
@@ -36,6 +37,8 @@ app.get("/webhook", (request, response) => {
 });
 
 app.post("/webhook", (request, response) => {
+
+  console.log("called1");
   let body_param = request.body;
 
 process.stderr.write("request is post" + request);
