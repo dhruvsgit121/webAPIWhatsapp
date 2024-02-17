@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const body_parser = require("body-parser");
 const { default: axios } = require("axios");
@@ -6,8 +8,12 @@ const app = express().use(body_parser.json());
 
 const token = process.env.TOKEN;
 const mytoken = process.env.MYTOKEN;
+const port = process.env.PORT || 8000;
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
+  console.log("value of token is " + token);
+  console.log("value of mytoken is " + mytoken);
+  console.log("value of port is " + port);
   console.log("Webhook is listening");
 });
 
@@ -75,6 +81,7 @@ process.stderr.write("request is post" + request);
 });
 
 app.get("/", (request, response) => {
+  
   response.status(200).send("Webhook is setup!!! Dhruv Gupta Testing the API");
 });
 
