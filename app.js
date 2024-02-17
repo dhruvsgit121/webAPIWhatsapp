@@ -41,7 +41,7 @@ app.get("/webhook", (request, response) => {
   }
 });
 
-app.post("/webhook", (request, response) => {
+app.post("/dhruv", (request, response) => {
 
   console.log("called1");
   let body_param = request.body;
