@@ -56,7 +56,7 @@ app.post("/webhook", (request, response) => {
       let from = body_param.entry[0].changes[0].value.messages[0].from;
 
       let msg_body = "";
-      if (body_param.entry[0].changes[0].value.messages[0].text.body) {
+      if (body_param.entry[0].changes[0].value.messages[0].text && body_param.entry[0].changes[0].value.messages[0].text.body) {
         msg_body = body_param.entry[0].changes[0].value.messages[0].text.body;
       } else {
         if (body_param.entry[0].changes[0].value.messages[0].type == "button") {
