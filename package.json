@@ -2,10 +2,10 @@
   "name": "webhook-in-nodejs",
   "version": "1.0.0",
   "description": "webhook implementation",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Dhruv",
   "license": "ISC",
