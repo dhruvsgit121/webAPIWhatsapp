@@ -5,7 +5,8 @@ require("dotenv").config();
 
 const app = express().use(body_parser.json());
 
-const token = process.env.TOKEN;
+// const token = process.env.TOKEN;
+const token = "EAAP6A94pp78BO12m5xZAkYaHxGyBYfpYuJbxsYryFV5m2QeVlq9RzTkqjri2GMCNxyt3sbhT2PWCrVZBvZAZBjdlj0Kg9QFBBUigyjVl5Lss6vVvuD0nPHZA4ZCiAWUUNW5RqOadOM0e3gjc15vSCHjafG5aGbJNStHuLzcemXxx9uPm1fNCBNWuUNrdcl9KdDBifObaQtGZCTqw8ry6IMZD";
 const mytoken = "dhruv";
 const port = process.env.PORT || 8000;
 
