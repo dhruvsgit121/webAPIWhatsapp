@@ -56,7 +56,7 @@ app.post("/webhook", (request, response) => {
       let msg_body = body_param.entry[0].changes[0].value.messages[0].text.body;
 
       axios({
-        method: post,
+        method: "POST",
         url:
           "https://graph.facebook.com/v18.0/" +
           phone_no_id +
@@ -80,8 +80,14 @@ app.post("/webhook", (request, response) => {
   }
 });
 
-app.post("/dhruvgupta", (request, response) => {
-  response.sendStatus(200).send("running post request");
+
+app.get("/", (request, response) => {
+  response.status(200).send("Webhook is setup!!! Dhruv Gupta Testing the API");
+});
+
+
+// app.post("/dhruvgupta", (request, response) => {
+//   response.sendStatus(200).send("running post request");
 
   //   console.log("called1");
   //   let body_param = request.body;
@@ -126,11 +132,9 @@ app.post("/dhruvgupta", (request, response) => {
   //       response.status(404);
   //     }
   //   }
-});
+// });
 
-app.get("/", (request, response) => {
-  response.status(200).send("Webhook is setup!!! Dhruv Gupta Testing the API");
-});
+
 
 // https://graph.facebook.com/v18.0/224738690728648/messages `
 //   -H 'Authorization: Bearer EAAP6A94pp78BOwRyZBZCIKFwULdLKe6scqUxuBgOvD6bwPifOMctVNcUTKRPOfLjTcZBvfI6M8CFJcwAA9KU59JHtrcBhITaE0cCnWbJcqSykW0QW5eulGdAb5BLU4et812ZCZC4skKhBSSanqNOmsBRDSniBmEOv60f5a8ttyfl4s9COrGT9RBLb51I62xymZA5SjjOtZAraU39iNpbykZD' `
