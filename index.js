@@ -55,7 +55,7 @@ app.post("/webhook", (request, response) => {
         body_param.entry[0].changes[0].value.metadata.phone_number_id;
       let from = body_param.entry[0].changes[0].value.messages[0].from;
 
-      var msg_body = "";
+      let msg_body = "";
       if (body_param.entry[0].changes[0].value.messages[0].text.body) {
         msg_body = body_param.entry[0].changes[0].value.messages[0].text.body;
       } else {
@@ -66,7 +66,7 @@ app.post("/webhook", (request, response) => {
           msg_body = "DEFAULT MESSAGE!!!";
         }
       }
-      let msg_body = body_param.entry[0].changes[0].value.messages[0].text.body;
+      //let msg_body = body_param.entry[0].changes[0].value.messages[0].text.body;
 
       // if(){
 
